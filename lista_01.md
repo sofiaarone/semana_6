@@ -30,8 +30,8 @@ c) A saída será undefined seguido de undefined
 
 d) A saída será erro em ambas as linhas que utilizam console.log
 
-**R: A alternativa correta é a "a". Isto porque, var x é içado, porém, mas sem um valor inicial. Então, console.log(x) imprime undefined.
-Entretanto, let y também é içado, mas fica na "Temporal Dead Zone" (TDZ); isto é: A Zona Morta Temporal, que é um período durante o qual uma variável declarada com let, var, ou const, não pode ser acessada antes de ser inicializada com um valor. Dessa forma, como console.log(y) tenta acessar y antes da inicialização, isso gera um ReferenceError.**
+**R: A alternativa correta é a "a". Isto porque, var x é içado, porém, sem um valor inicial. Então, console.log(x) imprime undefined.
+Entretanto, let y também é içado, mas fica na "Temporal Dead Zone" (TDZ); isto é: A Zona Morta Temporal, que é um período durante o qual uma variável declarada com let, var, ou const, não pode ser acessada antes de ser inicializada com um valor. Dessa forma, como console.log(y) tenta acessar y antes da inicialização, isto gera um ReferenceError.**
 
 
 **2) O seguinte código JavaScript tem um erro que impede sua execução correta. Analise e indique a opção que melhor corrige o problema. Justifique sua resposta.**
@@ -46,13 +46,15 @@ function soma(a, b) {
 console.log(soma(2, 0));
 ```
 
-a) Substituir if (a || b === 0) por if (a === 0 || b === 0)
+**a) Substituir if (a || b === 0) por if (a === 0 || b === 0)**
 
 b) Substituir if (a || b === 0) por if (a === 0 && b === 0)
 
 c) Substituir if (a || b === 0) por if (a && b === 0)
 
 d) Remover completamente a verificação if (a || b === 0)
+
+**R: A resposta correta é a alternativa "a". O erro ocorre porque a || b === 0 não verifica corretamente se a ou b são = 0, devido à precedência dos operadores. Portanto, para garantir o funcionamento do código corretamnete, basta fazer: a === 0 || b === 0.**
 
 ______
 **3) Ao executar esse código, qual será a saída no console? Indique a alternativa correta e justifique sua resposta.**
