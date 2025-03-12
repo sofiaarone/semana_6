@@ -22,13 +22,16 @@ var x = 5;
 console.log(y);
 let y = 10;
 ```
-a) A saída será undefined seguido de erro 
+**a) A saída será undefined seguido de erro** 
 
 b) A saída será 5 seguido de 10
 
 c) A saída será undefined seguido de undefined
 
 d) A saída será erro em ambas as linhas que utilizam console.log
+
+**R: A alternativa correta é a "a". Isto porque, var x é içado, porém, mas sem um valor inicial. Então, console.log(x) imprime undefined.
+Entretanto, let y também é içado, mas fica na "Temporal Dead Zone" (TDZ); isto é: A Zona Morta Temporal, que é um período durante o qual uma variável declarada com let, var, ou const, não pode ser acessada antes de ser inicializada com um valor. Dessa forma, como console.log(y) tenta acessar y antes da inicialização, isso gera um ReferenceError.**
 
 
 **2) O seguinte código JavaScript tem um erro que impede sua execução correta. Analise e indique a opção que melhor corrige o problema. Justifique sua resposta.**
