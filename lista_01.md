@@ -30,7 +30,7 @@ c) A saída será undefined seguido de undefined
 
 d) A saída será erro em ambas as linhas que utilizam console.log
 
-**R: A alternativa correta é a "a". Isto porque, var x é içado, porém, sem um valor inicial. Então, console.log(x) imprime undefined.
+**R: A alternativa correta é a (a). Isto porque, var x é içado, porém, sem um valor inicial. Então, console.log(x) imprime undefined.
 Entretanto, let y também é içado, mas fica na "Temporal Dead Zone" (TDZ); isto é: A Zona Morta Temporal, que é um período durante o qual uma variável declarada com let, var, ou const, não pode ser acessada antes de ser inicializada com um valor. Dessa forma, como console.log(y) tenta acessar y antes da inicialização, isto gera um ReferenceError.**
 
 ______
@@ -54,7 +54,7 @@ c) Substituir if (a || b === 0) por if (a && b === 0)
 
 d) Remover completamente a verificação if (a || b === 0)
 
-**R: A resposta correta é a alternativa "a". O erro ocorre porque a || b === 0 não verifica corretamente se a ou b são = 0, devido à precedência dos operadores. Portanto, para garantir o funcionamento do código corretamnete, basta fazer: a === 0 || b === 0.**
+**R: A resposta correta é a alternativa (a). O erro ocorre porque a || b === 0 não verifica corretamente se a ou b são = 0, devido à precedência dos operadores. Portanto, para garantir o funcionamento do código corretamente, basta fazer: a === 0 || b === 0.**
 
 ______
 **3) Ao executar esse código, qual será a saída no console? Indique a alternativa correta e justifique sua resposta.**
@@ -106,7 +106,10 @@ b) 6
 
 c) 18
 
-d) 24
+**d) 24**
+
+**R:O código passa por três etapas principais: 1) Multiplicação por 2 (map) → Todos os números do array são dobrados:
+[1, 2, 3, 4, 5] ---> [2, 4, 6, 8, 10]; 2) Filtragem (filter) → Mantém apenas os números maiores que 5:[2, 4, 6, 8, 10] ---> [6, 8, 10];3) Soma dos valores (reduce) → Soma os números que foram filtrados: 6 + 8 + 10 = 24. Portanto, a alternativa correta é a (d).**
 ______
 **5) Qual será o conteúdo do array lista após a execução do código? Indique a alternativa correta e justifique sua resposta.**
 
@@ -120,9 +123,12 @@ a) ["banana", "maçã", "uva", "abacaxi", "manga", "laranja"]
 
 b) ["banana", "abacaxi", "manga"]
 
-c) ["banana", "abacaxi", "manga", "laranja"]
+**c) ["banana", "abacaxi", "manga", "laranja"]**
 
 d) ["banana", "maçã", "uva", "abacaxi", "manga"]
+
+**R: O método splice modifica o array removendo e adicionando elementos. Dessa forma, o número 1 significa que a alteração começa na posição da "maçã".
+Já o número 2, indica que dois elementos serão removidos ("maçã" e "uva"). Assim, os elementos "abacaxi" e "manga" são adicionados no lugar de maçã e uva. Portanto, a alternativa correta é a (c).**
 ______
 **6) Abaixo há duas afirmações sobre herança em JavaScript. Indique a alternativa correta e justifique sua resposta**
 
