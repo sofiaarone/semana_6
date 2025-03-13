@@ -241,8 +241,8 @@ function somaArray(numeros) {
     // retornando a soma final
     return soma;
 
-    // Testando a função
-console.log(somaArray([1, 2, 3, 4]));  // Resultado esperado: 20
+console.log(somaArray([1, 2, 3, 4]));// testando a função 
+// resultado esperado: 20
 
 }
 ______
@@ -259,36 +259,32 @@ Explique como funciona a herança nesse contexto e como você implementaria a mo
 
 **Criando um exemplo:**
 
-// classe Produto
 class Produto {
     constructor(nome, preco) {
         this.nome = nome;
-        this.preco = preco;
+        this.preco = preco; // classe produto
     }
 
-    // método que aplica um desconto fixo de 10%
-    calcularDesconto() {
+    calcularDesconto() {   // método que aplica um desconto fixo de 10%
         return this.preco * 0.90;  // 10% de desconto
     }
 }
 
-// classe Livro que herda de Produto
-class Livro extends Produto {
+class Livro extends Produto {   // classe Livro que herda de Produto
     constructor(nome, preco) {
         super(nome, preco);  // chama o construtor da classe pai (Produto)
     }
 
-    // sobrescreve o método calcularDesconto para aplicar 20% de desconto
-    calcularDesconto() {
+    calcularDesconto() {    // sobrescreve o método calcularDesconto para aplicar 20% de desconto
         return this.preco * 0.80;  // 20% de desconto
     }
 }
 
-// criando instâncias de Produto e Livro
-let produto1 = new Produto("Smartphone", 1000);
+let produto1 = new Produto("Smartphone", 1000);  // criando instâncias de Produto e Livro
 let livro1 = new Livro("JavaScript para Iniciantes", 50);
 
-// testando os métodos
 console.log(`Preço do Produto: R$ ${produto1.calcularDesconto()}`);  // Esperado: 900
 console.log(`Preço do Livro: R$ ${livro1.calcularDesconto()}`);      // Esperado: 40
+
+// testando os métodos !!
 
