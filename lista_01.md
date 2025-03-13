@@ -180,13 +180,15 @@ III) O código não funciona corretamente, pois Funcionario não pode herdar de 
 
 Quais das seguintes afirmações são verdadeiras sobre o código acima?
 
-a) I e II são verdadeiras.
+**a) I e II são verdadeiras.**
 
 b) I, II e III são verdadeiras.
 
 c) Apenas II é verdadeira.
 
 d) Apenas I é verdadeira.
+
+**R: O único tópico que está incorreto é o III. Isto porque, na linguagem JavaScript, a herança de classes é suportada através da palavra-chave "extends". Portanto, o código funciona, sim, corretamente.**
 
 ______
 
