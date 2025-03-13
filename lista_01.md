@@ -108,8 +108,8 @@ c) 18
 
 **d) 24**
 
-**R:O código passa por três etapas principais: 1) Multiplicação por 2 (map) → Todos os números do array são dobrados:
-[1, 2, 3, 4, 5] ---> [2, 4, 6, 8, 10]; 2) Filtragem (filter) → Mantém apenas os números maiores que 5:[2, 4, 6, 8, 10] ---> [6, 8, 10];3) Soma dos valores (reduce) → Soma os números que foram filtrados: 6 + 8 + 10 = 24. Portanto, a alternativa correta é a (d).**
+**R: O código passa por três etapas principais: 1) Multiplicação por 2 (map) → Todos os números do array são dobrados:
+[1, 2, 3, 4, 5] ---> [2, 4, 6, 8, 10]; 2) Filtragem (filter) → Mantém apenas os números maiores que 5:[2, 4, 6, 8, 10] ---> [6, 8, 10]; 3) Soma dos valores (reduce) → Soma os números que foram filtrados: 6 + 8 + 10 = 24. Portanto, a alternativa correta é a (d).**
 ______
 **5) Qual será o conteúdo do array lista após a execução do código? Indique a alternativa correta e justifique sua resposta.**
 
@@ -138,11 +138,13 @@ II. Em JavaScript, a herança é implementada através da palavra-chave `extends
 
 a) As duas afirmações são verdadeiras, e a segunda justifica a primeira.
 
-b) As duas afirmações são verdadeiras, mas a segunda não justifica a primeira.
+**b) As duas afirmações são verdadeiras, mas a segunda não justifica a primeira.**
 
 c) A primeira afirmação é verdadeira, e a segunda é falsa.
 
 d) A primeira afirmação é falsa, e a segunda é verdadeira.
+
+**R: A alternativa correta é a (b), pois, a segunda afirmação não justifica a primeira, porque ela apenas indica como a herança é implementada, sem explicar o conceito mais amplo da palavra-chave.**
 ______
 **7) Dado o seguinte código. Indique a alternativa correta e justifique sua resposta.**
 
