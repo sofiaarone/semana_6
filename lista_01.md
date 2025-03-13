@@ -228,6 +228,8 @@ console.log(somaArray([1, 2, 3, 4]));
 
 **Código corrigido:**
 
+```javascript
+
 function somaArray(numeros) {
     // inicializando a variável soma com 0
     let soma = 0;
@@ -245,6 +247,8 @@ console.log(somaArray([1, 2, 3, 4]));// testando a função
 // resultado esperado: 20
 
 }
+
+```
 ______
 
 10) Crie um exemplo prático no qual você tenha duas classes:
@@ -258,6 +262,8 @@ Explique como funciona a herança nesse contexto e como você implementaria a mo
 
 
 **Criando um exemplo:**
+
+```javascript
 
 class Produto {
     constructor(nome, preco) {
@@ -287,4 +293,5 @@ console.log(`Preço do Produto: R$ ${produto1.calcularDesconto()}`);  // Esperad
 console.log(`Preço do Livro: R$ ${livro1.calcularDesconto()}`);      // Esperado: 40
 
 // testando os métodos !!
+```
 
