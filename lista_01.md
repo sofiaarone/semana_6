@@ -199,12 +199,13 @@ ______
 
 a) A asserção é falsa e a razão é verdadeira.
 
-b) A asserção é verdadeira e a razão é falsa.
+**b) A asserção é verdadeira e a razão é falsa.**
 
 c) A asserção é verdadeira e a razão é verdadeira, mas a razão não explica a asserção.
 
 d) A asserção é verdadeira e a razão é verdadeira, e a razão explica a asserção.
 
+**R: A alternativa correta é a (b). Dado isso, na asserção, diz que o polimorfismo em POO permite que objetos de tipos diferentes respondam de formas distintas à mesma mensagem, o que é verdade. Porém, a razão está incorreta, pois, a sobrecarga de métodos não é suportada em JavaScript de forma nativa.**
 ______
 
 # Questões dissertativas
@@ -220,10 +221,73 @@ function somaArray(numeros) {
 }
 console.log(somaArray([1, 2, 3, 4]));
 ```
+**R: Os problemas contidos no código são:**
+**- O método size não existe para arrays em JavaScript. Portanto, o correto é usar a propriedade length para obter o tamanho de um array.**
+**- A variável "soma" não foi inicializada antes de ser usada no loop. Entretanto, o ideal é inicializar a soma com 0 antes de começar a somar os valores.**
+**- Falta de acumulação da soma; dentro do loop, a linha soma = 2 * numeros[i]; substitui o valor de soma a cada iteração. O correto seria acumular o valor, ao invés de substituí-lo. Ou seja, deve-se somar o dobro de cada número ao valor acumulado.**
+
+**Código corrigido:**
+
+function somaArray(numeros) {
+    // inicializando a variável soma com 0
+    let soma = 0;
+
+    // usando 'numeros.length' para obter o tamanho correto do array
+    for (let i = 0; i < numeros.length; i++) {
+        // Acumulando o dobro de cada número no array
+        soma += 2 * numeros[i];
+    }
+
+    // retornando a soma final
+    return soma;
+}
+
+// testando a função
+console.log(somaArray([1, 2, 3, 4]));  // resultado esperado: 20
 ______
+
 10) Crie um exemplo prático no qual você tenha duas classes:
 
 - Uma classe `Produto` com atributos `nome` e `preco`, e um método `calcularDesconto()` que aplica um desconto fixo de 10% no preço do produto.
 - Uma classe `Livro` que herda de `Produto` e modifica o método `calcularDesconto()`, aplicando um desconto de 20% no preço dos livros.
 
 Explique como funciona a herança nesse contexto e como você implementaria a modificação do método na classe `Livro`.
+
+**R: O que é herança no contexto de classes? A herança, nada mais é, do que algo que permite que uma classe herde propriedades e métodos de outra classe. Dessas forma, a classe Livro irá herdar as propriedades (nome e preço) da classe Produto e, ao mesmo tempo, poderá modificar métodos dessa classe, como o calcularDesconto(). Isto é feito utilizando o conceito de polimorfismo, onde a classe filha, neste caso, "Livro", redefine um método da classe pai (Produto) para, assim, comportar-se de maneira diferente. No entanto, o método calcularDesconto() na classe Livro foi sobrescrito para aplicar um desconto diferente de 20%, ao invés de 10%. Isto é feito da seguinte maneira: calcularDesconto() { return this.preco * 0.80; }.**
+
+
+**Criando um exemplo:**
+
+// classe Produto
+class Produto {
+    constructor(nome, preco) {
+        this.nome = nome;
+        this.preco = preco;
+    }
+
+    // método que aplica um desconto fixo de 10%
+    calcularDesconto() {
+        return this.preco * 0.90;  // 10% de desconto
+    }
+}
+
+// classe Livro que herda de Produto
+class Livro extends Produto {
+    constructor(nome, preco) {
+        super(nome, preco);  // chama o construtor da classe pai (Produto)
+    }
+
+    // sobrescreve o método calcularDesconto para aplicar 20% de desconto
+    calcularDesconto() {
+        return this.preco * 0.80;  // 20% de desconto
+    }
+}
+
+// criando instâncias de Produto e Livro
+let produto1 = new Produto("Smartphone", 1000);
+let livro1 = new Livro("JavaScript para Iniciantes", 50);
+
+// testando os métodos
+console.log(`Preço do Produto: R$ ${produto1.calcularDesconto()}`);  // Esperado: 900
+console.log(`Preço do Livro: R$ ${livro1.calcularDesconto()}`);      // Esperado: 40
+
