@@ -240,10 +240,11 @@ function somaArray(numeros) {
 
     // retornando a soma final
     return soma;
-}
 
-// testando a função
-console.log(somaArray([1, 2, 3, 4]));  // resultado esperado: 20
+    // Testando a função
+console.log(somaArray([1, 2, 3, 4]));  // Resultado esperado: 20
+
+}
 ______
 
 10) Crie um exemplo prático no qual você tenha duas classes:
